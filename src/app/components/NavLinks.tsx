@@ -14,10 +14,10 @@ export default async function NavLinks() {
   const filteredData = nav.filter((n) => n.scrapable);
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 justify-center">
       <Link href={"/"}>হোম</Link>
       {filteredData.map((n, i) => (
-        <Link href={n.slug} key={i}>
+        <Link href={`category/${n.slug}`} key={i}>
           {n.title}
         </Link>
       ))}

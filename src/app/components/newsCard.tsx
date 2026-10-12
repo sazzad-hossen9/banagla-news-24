@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 
 const NewsCard = ({ news }) => {
   return (
     <>
-      <div>
+      <Link href={`/news/${news.id}`}>
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
             <Image src={news.imageUrl} width={600} height={600} alt="Shoes" />
@@ -15,7 +15,7 @@ const NewsCard = ({ news }) => {
             <p>{news.description}</p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
